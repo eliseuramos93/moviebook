@@ -1,3 +1,3 @@
 class Director < ApplicationRecord
-  has_many :moviesre
+  has_many :movies
 end
