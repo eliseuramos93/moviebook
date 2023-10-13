@@ -1,7 +1,19 @@
 <h1>Lista de todos os filmes</h1>
 
+<h2>Filmes lançados</h2>
+
 <ol>
-  <% @movies.each do |movie| %>
+  <% @released.each do |movie| %>
+    <li>
+      <%= link_to movie.title, movie %> (<%= movie.release_year %>)
+    </li>
+  <% end %>
+</ol>
+
+<h2>Filmes em produção</h2>
+
+<ol>
+  <% @production.each do |movie| %>
     <li>
       <%= link_to movie.title, movie %> (<%= movie.release_year %>)
     </li>

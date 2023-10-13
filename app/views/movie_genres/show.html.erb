@@ -2,8 +2,20 @@
 
 <%= link_to 'Editar informações', edit_movie_genre_path %>
 
+<h2>Filmes lançados de <%= @movie_genre.description %></h2>
+
 <ol>
-  <% @movie_genre.movies.each do |movie| %>
+  <% @movie_genre.movies.released.each do |movie| %>
+  <li>
+    <%= link_to movie.title, movie %>
+  </li>
+  <% end %>
+</ol>
+
+<h2>Filmes em produção de <%= @movie_genre.description %></h2>
+
+<ol>
+  <% @movie_genre.movies.production.each do |movie| %>
   <li>
     <%= link_to movie.title, movie %>
   </li>

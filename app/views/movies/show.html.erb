@@ -26,4 +26,12 @@
   <dd>
     <strong>Gênero:</strong> <%= link_to @movie.movie_genre.description, @movie.movie_genre %>
   </dd>
+  <dd>
+  <strong>Status do filme: </strong> <%= @movie.released? ? 'Lançado' : 'Em produção' %></dd>
 </dl>
+
+  <% if @movie.production? %>
+    <%= button_to 'Marcar como lançado', released_movie_path, { method: 'patch' } %> 
+  <% else %>
+    <%= button_to 'Marcar como em produção', production_movie_path, { method: 'patch' } %>
+  <% end %>

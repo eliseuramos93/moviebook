@@ -3,8 +3,20 @@
 
 <%= link_to 'Editar informações', edit_director_path %>
 
+<h2>Filmes lançados de <%= @director.name %></h2>
+
 <ol>
-  <% @director.movies.each do |movie| %>
+  <% @director.movies.released.each do |movie| %>
+    <li>
+      <%= link_to movie.title, movie %>
+    </li>
+  <% end %>
+</ol>
+
+<h2>Filmes em produção de <%= @director.name %></h2>
+
+<ol>
+  <% @director.movies.production.each do |movie| %>
     <li>
       <%= link_to movie.title, movie %>
     </li>
