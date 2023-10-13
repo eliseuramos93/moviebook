@@ -1,1 +1,9 @@
-lista com todos os diretores
+<h1>Lista de diretores de filmes</h1>
+
+<ol>
+  <% @directors.each do |director| %>
+    <li>
+      <%= link_to director.name, director %>
+    </li>
+  <% end %>
+</ol>

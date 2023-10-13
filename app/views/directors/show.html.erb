@@ -1,1 +1,9 @@
-informações sobre um diretor específico
+<h1>Lista de filmes feitos por <%= @director.name %></h1>
+
+<ol>
+  <% @director.movies.each do |movie| %>
+    <li>
+      <%= link_to movie.title, movie %>
+    </li>
+  <% end %>
+</ol>

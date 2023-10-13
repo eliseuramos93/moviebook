@@ -34,7 +34,6 @@ class MovieGenresController < ApplicationController
 
   def show
     @movie_genre = MovieGenre.find(params[:id])
-    @movies = @movie_genre.movies.all
   end
 
   private

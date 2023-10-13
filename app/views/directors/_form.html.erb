@@ -1,0 +1,15 @@
+<%= form_with model: director do |form| %>
+  <%= form.label 'Nome:' %>
+  <%= form.text_field :name %> <br />
+
+  <%= form.label 'Nacionalidade:' %>
+  <%= form.text_field :nationality %> <br />
+
+  <%= form.label 'Data de nascimento:' %>
+  <%= form.date_field :date_of_birth %> <br />
+
+  <%= form.label 'Gênero favorito:' %>
+  <%= form.collection_select :favorite_genre_id, MovieGenre.all, :id, :description %> <br />
+
+  <%= form.submit 'Salvar diretor(a)' %>
+<% end %>
