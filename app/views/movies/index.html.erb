@@ -1,1 +1,9 @@
-lista de todos os filmes
+<h1>Lista de todos os filmes</h1>
+
+<ol>
+  <% @movies.each do |movie| %>
+    <li>
+      <%= link_to movie.title, movie %> (<%= movie.release_year %>)
+    </li>
+  <% end %>
+</ol>

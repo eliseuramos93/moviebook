@@ -1,1 +1,7 @@
-formulário para adicionar novo filme
+<h1>Adicionar novo filme </h1>
+
+<% if flash[:notice] %>
+  <em> <%= flash[:notice] %> </em>
+<% end %>
+
+<%= render partial: "form", locals: { movie: @movie } %>

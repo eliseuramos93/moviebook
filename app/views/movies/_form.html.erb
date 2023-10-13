@@ -1,0 +1,24 @@
+<%= form_with model: movie do |form| %>
+  <%= form.label 'Título: '%>
+  <%= form.text_field :title %> <br />
+
+  <%= form.label 'Ano de lançamento: '%>
+  <%= form.number_field :release_year %> <br />
+  
+  <%= form.label 'Sinopse: '%>
+  <%= form.text_area :plot %> <br />
+  
+  <%= form.label 'País de origem: '%>
+  <%= form.text_field :country %> <br />
+  
+  <%= form.label 'Duração (em minutos): '%>
+  <%= form.number_field :duration %> <br />
+  
+  <%= form.label 'Diretor: '%>
+  <%= form.collection_select :director_id, Director.all, :id, :name %> <br />
+  
+  <%= form.label 'Gênero: '%>
+  <%= form.collection_select :movie_genre_id, MovieGenre.all, :id, :description %> <br />
+  
+  <%= form.submit 'Salvar' %>  
+<% end %>

@@ -1,1 +1,27 @@
-informações individuais de um filme
+<h1>
+  <%= @movie.title %>
+</h1>
+
+<dl>
+  <dd>
+    <strong>Título: </strong> <%= @movie.title %>
+  </dd>
+  <dd>
+    <strong>Ano de lançamento: </strong> <%= @movie.release_year %>
+  </dd>
+  <dd>
+    <strong>Sinopse: </strong> <%= @movie.plot %>
+  </dd>
+  <dd>
+    <strong>País de origem: </strong> <%= @movie.country %>
+  </dd>
+  <dd>
+    <strong>Duração (minutos):</strong> <%= @movie.duration %>
+  </dd>
+  <dd>
+    <strong>Diretor(a):</strong> <%= @movie.director.name %>
+  </dd>
+  <dd>
+    <strong>Gênero:</strong> <%= @movie.movie_genre.description %>
+  </dd>
+</dl>

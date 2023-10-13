@@ -1,1 +1,5 @@
-formulário para editar filmes
+<h1>
+  Editar informações de <%= @movie.title %>
+</h1>
+
+<%= render partial: "form", locals: { movie: @movie } %>
