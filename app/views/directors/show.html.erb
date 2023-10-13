@@ -6,7 +6,7 @@
 <h2>Filmes lançados de <%= @director.name %></h2>
 
 <ol>
-  <% @director.movies.released.each do |movie| %>
+  <% @director.movies.published.released.each do |movie| %>
     <li>
       <%= link_to movie.title, movie %>
     </li>
@@ -16,7 +16,7 @@
 <h2>Filmes em produção de <%= @director.name %></h2>
 
 <ol>
-  <% @director.movies.production.each do |movie| %>
+  <% @director.movies.published.production.each do |movie| %>
     <li>
       <%= link_to movie.title, movie %>
     </li>

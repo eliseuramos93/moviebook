@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
   def index
-    @released = Movie.released
-    @production = Movie.production
+    @released = Movie.published.released
+    @production = Movie.published.production
   end
 
   def new
@@ -46,6 +46,18 @@ class MoviesController < ApplicationController
   def production
     @movie = Movie.find(params[:id])
     @movie.production!
+    redirect_to @movie
+  end
+
+  def publish
+    @movie = Movie.find(params[:id])
+    @movie.published!
+    redirect_to @movie
+  end
+
+  def draft
+    @movie = Movie.find(params[:id])
+    @movie.draft!
     redirect_to @movie
   end
 

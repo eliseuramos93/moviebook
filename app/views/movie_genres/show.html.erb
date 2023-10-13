@@ -5,7 +5,7 @@
 <h2>Filmes lançados de <%= @movie_genre.description %></h2>
 
 <ol>
-  <% @movie_genre.movies.released.each do |movie| %>
+  <% @movie_genre.movies.published.released.each do |movie| %>
   <li>
     <%= link_to movie.title, movie %>
   </li>
@@ -15,7 +15,7 @@
 <h2>Filmes em produção de <%= @movie_genre.description %></h2>
 
 <ol>
-  <% @movie_genre.movies.production.each do |movie| %>
+  <% @movie_genre.movies.published.production.each do |movie| %>
   <li>
     <%= link_to movie.title, movie %>
   </li>

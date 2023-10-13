@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :movies, only: [:new, :create, :edit, :update, :index, :show] do
     patch :production, on: :member
     patch :released, on: :member
+    patch :publish, on: :member
+    patch :draft, on: :member
   end
   resources :directors, only: [:new, :create, :edit, :update, :index, :show]
 

@@ -30,8 +30,14 @@
   <strong>Status do filme: </strong> <%= @movie.released? ? 'Lançado' : 'Em produção' %></dd>
 </dl>
 
-  <% if @movie.production? %>
-    <%= button_to 'Marcar como lançado', released_movie_path, { method: 'patch' } %> 
-  <% else %>
-    <%= button_to 'Marcar como em produção', production_movie_path, { method: 'patch' } %>
-  <% end %>
+<% if @movie.production? %>
+  <%= button_to 'Marcar como lançado', released_movie_path, { method: 'patch' } %> 
+<% else %>
+  <%= button_to 'Marcar como em produção', production_movie_path, { method: 'patch' } %>
+<% end %>
+<br>
+<% if @movie.published? %>
+  <%= button_to 'Marcar como rascunho', draft_movie_path, { method: 'patch' } %> 
+<% else %>
+  <%= button_to 'Publicar filme', publish_movie_path, { method: 'patch' } %>
+<% end %>
