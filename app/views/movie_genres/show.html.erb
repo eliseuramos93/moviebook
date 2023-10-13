@@ -1,5 +1,7 @@
 <h1>Lista de filmes - <%= @movie_genre.description %></h1>
 
+<%= link_to 'Editar informações', edit_movie_genre_path %>
+
 <ol>
   <% @movie_genre.movies.each do |movie| %>
   <li>

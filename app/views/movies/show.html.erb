@@ -2,6 +2,8 @@
   <%= @movie.title %>
 </h1>
 
+<%= link_to 'Editar informações', edit_movie_path %>
+
 <dl>
   <dd>
     <strong>Título: </strong> <%= @movie.title %>
@@ -19,9 +21,9 @@
     <strong>Duração (minutos):</strong> <%= @movie.duration %>
   </dd>
   <dd>
-    <strong>Diretor(a):</strong> <%= @movie.director.name %>
+    <strong>Diretor(a):</strong> <%= link_to @movie.director.name, @movie.director %>
   </dd>
   <dd>
-    <strong>Gênero:</strong> <%= @movie.movie_genre.description %>
+    <strong>Gênero:</strong> <%= link_to @movie.movie_genre.description, @movie.movie_genre %>
   </dd>
 </dl>

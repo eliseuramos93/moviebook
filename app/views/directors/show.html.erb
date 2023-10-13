@@ -1,4 +1,7 @@
 <h1>Lista de filmes feitos por <%= @director.name %></h1>
+<em>Gênero favorito: <%= link_to @director.favorite_genre.description, @director.favorite_genre %></em> <br />
+
+<%= link_to 'Editar informações', edit_director_path %>
 
 <ol>
   <% @director.movies.each do |movie| %>
