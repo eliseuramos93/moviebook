@@ -14,9 +14,9 @@
     <nav>
       <dl>
       <dd><%= link_to 'Home', root_path %></dd>
-      <dd><%= link_to 'Adicionar filme', root_path %></dd>
-      <dd><%= link_to 'Adicionar gênero', root_path %></dd>
-      <dd><%= link_to 'Adicionar diretor', root_path %></dd>
+      <dd><%= link_to 'Adicionar filme', new_movie_path %></dd>
+      <dd><%= link_to 'Adicionar gênero', new_movie_genre_path %></dd>
+      <dd><%= link_to 'Adicionar diretor', new_director_path %></dd>
       </dl>
     </nav>
     <%= yield %>
