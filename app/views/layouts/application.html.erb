@@ -11,6 +11,14 @@
   </head>
 
   <body>
+    <nav>
+      <dl>
+      <dd><%= link_to 'Home', root_path %></dd>
+      <dd><%= link_to 'Adicionar filme', root_path %></dd>
+      <dd><%= link_to 'Adicionar gênero', root_path %></dd>
+      <dd><%= link_to 'Adicionar diretor', root_path %></dd>
+      </dl>
+    </nav>
     <%= yield %>
   </body>
 </html>
