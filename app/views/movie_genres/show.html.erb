@@ -1,1 +1,9 @@
-aqui vão as informações individuais do filme
+<h1>Lista de filmes - <%= @movie_genre.description %></h1>
+
+<ol>
+  <% @movies.each do |movie| %>
+  <li>
+    <%= link_to movie.title, movie %>
+  </li>
+  <% end %>
+</ol>

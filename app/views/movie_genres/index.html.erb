@@ -1,1 +1,8 @@
 aqui vai a lista de generos de filmes
+<ol>
+  <% @movie_genres.each do |genre| %>
+    <li>
+      <%= link_to genre.description, genre %>
+    </li>
+  <% end %>
+</ol>
