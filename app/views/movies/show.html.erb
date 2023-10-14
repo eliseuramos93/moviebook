@@ -2,7 +2,9 @@
   <%= @movie.title %>
 </h1>
 
-<%= link_to 'Editar informações', edit_movie_path %>
+<%= link_to 'Editar informações', edit_movie_path %> <br />
+
+<img src="<%= url_for(@movie.poster) %>">
 
 <dl>
   <dd>
