@@ -20,5 +20,8 @@
   <%= form.label 'Gênero: '%>
   <%= form.collection_select :movie_genre_id, MovieGenre.all, :id, :description %> <br />
   
+  <%= form.label 'Poster do filme: '%>
+  <%= form.file_field :poster %> <br />
+  
   <%= form.submit 'Salvar' %>  
 <% end %>
